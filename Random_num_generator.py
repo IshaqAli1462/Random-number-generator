@@ -6,19 +6,17 @@ from tkinter import Spinbox
 
 # Creating Random Number and validation
 def createRanNumber():
-    if str(ranInput1.get()).isnumeric() and str(ranInput2.get()).isnumeric():
+    try:
         ranNum1 = int(ranInput1.get())
         ranNum2 = int(ranInput2.get())
         if ranNum1 < ranNum2:
             ranNum = random.randrange(ranNum1, ranNum2)
             ranNumText.value = int(ranNum)
-        elif ranNum1 > ranNum2:
+        else:
             ranNum = random.randrange(ranNum2, ranNum1)
             ranNumText.value = int(ranNum)
-        else:
-            error("Num Generator", "Please provide two different numbers between 1 and 1000000")
-    else:
-        error("Num Generator", "Please enter a number")
+    except:
+        error("Num Generator", "Please provide two different numbers between 1 and 1000000")
 
 # GUI
 app = App(title="Random Number Generator", width=350, height=300)
