@@ -1,1 +1,1 @@
-A random number generator made with the guizero module.
+A GUI random number generator. The application gives you the option to roll a random number from 0 to 1,000,000. I wrote this to get comfortable with building graphical user interfaces with python, for this I used tkinter and guizero. Guizero is a python 3 library for creating simple GUIs. Writing this programme also allowed me to learn and get comfortable with using exception handling.
